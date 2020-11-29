@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C16A490-5194-43B9-A666-CB0D086491D4}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Patterns</RootNamespace>
+    <AssemblyName>Patterns</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractFactory\PizzaFactory\ChicagoPizzaStore.cs" />
+    <Compile Include="AbstractFactory\PizzaFactory\NYPizzaStore.cs" />
+    <Compile Include="AbstractFactory\PizzaFactory\PizzaStore.cs" />
+    <Compile Include="AbstractFactory\Pizza\CheesePizza.cs" />
+    <Compile Include="AbstractFactory\Pizza\ClamPizza.cs" />
+    <Compile Include="AbstractFactory\Pizza\Pizza.cs" />
+    <Compile Include="Adapter\ITurkey.cs" />
+    <Compile Include="Adapter\TurkeyToDuckAdapter.cs" />
+    <Compile Include="Adapter\WildTurkey.cs" />
+    <Compile Include="Command\FanCommand.cs" />
+    <Compile Include="Command\ICommand.cs" />
+    <Compile Include="Command\Devices\AcousticSystem.cs" />
+    <Compile Include="Command\Devices\Fan.cs" />
+    <Compile Include="Command\Devices\Light.cs" />
+    <Compile Include="Command\LightCommand.cs" />
+    <Compile Include="Command\NoCommand.cs" />
+    <Compile Include="Command\RemoteControl.cs" />
+    <Compile Include="CompositeAndIterator\Menu.cs" />
+    <Compile Include="CompositeAndIterator\MenuComponent.cs" />
+    <Compile Include="CompositeAndIterator\MenuItem.cs" />
+    <Compile Include="CompositeAndIterator\NullIterator.cs" />
+    <Compile Include="Decorator\Beverage\Beverage.cs" />
+    <Compile Include="Decorator\Beverage\Espresso.cs" />
+    <Compile Include="Decorator\CondimentDecorator.cs" />
+    <Compile Include="Decorator\Whip.cs" />
+    <Compile Include="Decorator\Mocha.cs" />
+    <Compile Include="Decorator\Soy.cs" />
+    <Compile Include="Decorator\Beverage\HouseBlend.cs" />
+    <Compile Include="AbstractFactory\IngredientFactory\ChicagoPizzaIngredientFactory.cs" />
+    <Compile Include="AbstractFactory\IngredientFactory\NYPizzaIngredientFactory.cs" />
+    <Compile Include="AbstractFactory\IngredientFactory\IPizzaIngredientFactory.cs" />
+    <Compile Include="AbstractFactory\Ingredients\Cheese.cs" />
+    <Compile Include="AbstractFactory\Ingredients\Clam.cs" />
+    <Compile Include="AbstractFactory\Ingredients\Dough.cs" />
+    <Compile Include="AbstractFactory\Ingredients\RealIngredient\FreshClam.cs" />
+    <Compile Include="AbstractFactory\Ingredients\RealIngredient\FrozzenClam.cs" />
+    <Compile Include="AbstractFactory\Ingredients\RealIngredient\MarinaraSauce.cs" />
+    <Compile Include="AbstractFactory\Ingredients\RealIngredient\Mozzarella.cs" />
+    <Compile Include="AbstractFactory\Ingredients\RealIngredient\PlumTomatoSauce.cs" />
+    <Compile Include="AbstractFactory\Ingredients\RealIngredient\ReggianoCheese.cs" />
+    <Compile Include="AbstractFactory\Ingredients\RealIngredient\ThickCrustDough.cs" />
+    <Compile Include="AbstractFactory\Ingredients\RealIngredient\ThinCrustDough.cs" />
+    <Compile Include="AbstractFactory\Ingredients\Sauce.cs" />
+    <Compile Include="Observer\CurrentWeatherDisplay.cs" />
+    <Compile Include="Observer\ForecastDisplay.cs" />
+    <Compile Include="Observer\WeatherData.cs" />
+    <Compile Include="Observer\WeatherObserver.cs" />
+    <Compile Include="Singleton\ChocolateBoiler.cs" />
+    <Compile Include="State\GumballMachine.cs" />
+    <Compile Include="State\States\HasQuarterState.cs" />
+    <Compile Include="State\States\NoQuarterState.cs" />
+    <Compile Include="State\States\SoldState.cs" />
+    <Compile Include="State\States\State.cs" />
+    <Compile Include="Strategy\DuckBehavior\Fly\FlyNoWay.cs" />
+    <Compile Include="Strategy\DuckBehavior\Fly\FlyWithWings.cs" />
+    <Compile Include="Strategy\DuckBehavior\Fly\IFlyBehavior.cs" />
+    <Compile Include="Strategy\DuckBehavior\Quack\IQuackBehavior.cs" />
+    <Compile Include="Strategy\DuckBehavior\Quack\MuteQuack.cs" />
+    <Compile Include="Strategy\DuckBehavior\Quack\SimpleQuack.cs" />
+    <Compile Include="Strategy\DuckBehavior\Quack\Squeak.cs" />
+    <Compile Include="Strategy\Duck\MallardDuck.cs" />
+    <Compile Include="Strategy\Duck\RubberDuck.cs" />
+    <Compile Include="Display.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Display.Designer.cs">
+      <DependentUpon>Display.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Strategy\Duck\Duck.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="TemplateMethod\Coffee.cs" />
+    <Compile Include="TemplateMethod\StandartBeverage.cs" />
+    <Compile Include="TemplateMethod\Tea.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Display.resx">
+      <DependentUpon>Display.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
